@@ -9,7 +9,7 @@ export interface Message {
 }
 
 export interface Conversation {
-  id: string;
+  id:string;
   title: string;
   lastActivity: string;
   messages: Message[];
@@ -19,7 +19,7 @@ export interface Model {
   id: string;
   name: string;
   description: string;
-  category: 'jan' | 'local' | 'cloud';
+  category: 'cortex' | 'local' | 'cloud';
   size: string;
   type: 'GGUF' | 'Cloud';
   rating: number;

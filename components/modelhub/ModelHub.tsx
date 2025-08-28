@@ -28,7 +28,7 @@ const ModelHub: React.FC<ModelHubProps> = ({ models, onDownloadModel, onSelectMo
 
   const localModels = filteredModels.filter(m => m.category === 'local');
   const cloudModels = filteredModels.filter(m => m.category === 'cloud');
-  const janModels = filteredModels.filter(m => m.category === 'jan');
+  const cortexModels = filteredModels.filter(m => m.category === 'cortex');
 
   const ModelCard: React.FC<{ model: Model }> = ({ model }) => (
     <Card className="hover:shadow-lg transition-shadow bg-white dark:bg-gray-900 flex flex-col">
@@ -36,10 +36,10 @@ const ModelHub: React.FC<ModelHubProps> = ({ models, onDownloadModel, onSelectMo
         <div className="flex items-start justify-between">
           <div className="flex items-center gap-3">
             <div className={`h-10 w-10 rounded-lg flex items-center justify-center ${
-              model.category === 'jan' ? 'bg-gradient-to-br from-orange-400 to-red-500' 
+              model.category === 'cortex' ? 'bg-gradient-to-br from-orange-400 to-red-500' 
               : model.category === 'local' ? 'bg-blue-500' : 'bg-purple-500'
             }`}>
-              {model.category === 'jan' ? <Flame className="h-5 w-5 text-white" />
+              {model.category === 'cortex' ? <Flame className="h-5 w-5 text-white" />
               : model.category === 'local' ? <HardDrive className="h-5 w-5 text-white" />
               : <Cloud className="h-5 w-5 text-white" />}
             </div>
@@ -104,14 +104,14 @@ const ModelHub: React.FC<ModelHubProps> = ({ models, onDownloadModel, onSelectMo
         </div>
       </div>
       <div className="flex-1 p-6 overflow-hidden">
-        <Tabs defaultValue="jan" className="w-full h-full flex flex-col">
+        <Tabs defaultValue="cortex" className="w-full h-full flex flex-col">
           <TabsList className="grid w-full grid-cols-3">
-            <TabsTrigger value="jan"><Flame className="h-4 w-4 mr-2" /> Jan Models</TabsTrigger>
+            <TabsTrigger value="cortex"><Flame className="h-4 w-4 mr-2" /> Cortex Models</TabsTrigger>
             <TabsTrigger value="local"><HardDrive className="h-4 w-4 mr-2" /> Local Models</TabsTrigger>
             <TabsTrigger value="cloud"><Cloud className="h-4 w-4 mr-2" /> Cloud Models</TabsTrigger>
           </TabsList>
           <div className="flex-grow mt-2 overflow-hidden">
-            <TabsContent value="jan">{renderTabContent("Jan's Custom Models", "Optimized models built specifically for Jan's local AI experience", janModels)}</TabsContent>
+            <TabsContent value="cortex">{renderTabContent("Cortex's Custom Models", "Optimized models built specifically for Cortex's local AI experience", cortexModels)}</TabsContent>
             <TabsContent value="local">{renderTabContent("Open Source Models", "Community models from HuggingFace that run locally on your device", localModels)}</TabsContent>
             <TabsContent value="cloud">{renderTabContent("Cloud Providers", "Connect your API keys to use cloud-based AI models", cloudModels)}</TabsContent>
           </div>

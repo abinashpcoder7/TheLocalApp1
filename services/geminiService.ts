@@ -11,11 +11,11 @@ const ai = new GoogleGenAI({ apiKey: API_KEY! });
 const model = 'gemini-2.5-flash';
 
 const mockResponses = [
-    "I understand you're asking about that. As your local AI assistant running on Jan, I can help you explore this topic while keeping all our conversation private on your device.",
-    "That's a great question! Since I'm running locally through Jan, I can provide detailed assistance without any privacy concerns. Let me break this down for you...",
-    "I'm happy to help with that. One of the benefits of using Jan is that I can process your requests completely offline while maintaining your privacy. Here's what I think...",
-    "Thanks for asking! As a local AI model running through Jan, I have access to my training knowledge while ensuring your data stays on your device. Let me provide some insights...",
-    "I can definitely assist you with this. Running locally on Jan means we can have detailed discussions without worrying about data privacy. Here's my analysis...",
+    "I understand you're asking about that. As your local AI assistant running on Cortex, I can help you explore this topic while keeping all our conversation private on your device.",
+    "That's a great question! Since I'm running locally through Cortex, I can provide detailed assistance without any privacy concerns. Let me break this down for you...",
+    "I'm happy to help with that. One of the benefits of using Cortex is that I can process your requests completely offline while maintaining your privacy. Here's what I think...",
+    "Thanks for asking! As a local AI model running through Cortex, I have access to my training knowledge while ensuring your data stays on your device. Let me provide some insights...",
+    "I can definitely assist you with this. Running locally on Cortex means we can have detailed discussions without worrying about data privacy. Here's my analysis...",
 ];
 
 const getMockResponse = (prompt: string): Promise<string> => {
@@ -23,7 +23,7 @@ const getMockResponse = (prompt: string): Promise<string> => {
         setTimeout(() => {
             let responseContent = mockResponses[Math.floor(Math.random() * mockResponses.length)];
              if (prompt.toLowerCase().includes('code') || prompt.toLowerCase().includes('programming')) {
-                responseContent = "I'd be happy to help with your coding question! Since I'm running locally through Jan, I can review code, suggest improvements, and help debug without any privacy concerns about your proprietary code. What specific programming challenge are you working on?";
+                responseContent = "I'd be happy to help with your coding question! Since I'm running locally through Cortex, I can review code, suggest improvements, and help debug without any privacy concerns about your proprietary code. What specific programming challenge are you working on?";
             }
             resolve(responseContent);
         }, 1000 + Math.random() * 500);

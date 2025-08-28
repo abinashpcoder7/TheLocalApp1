@@ -2,12 +2,12 @@
 import { Model, Conversation, Settings } from '../types';
 
 export const mockModels: Model[] = [
-  // Jan Models
+  // Cortex Models
   {
-    id: 'jan-v1',
-    name: 'Jan-v1',
+    id: 'cortex-v1',
+    name: 'Cortex-v1',
     description: '4B reasoning model specialized in web search and tool integration. Optimized for local deployment.',
-    category: 'jan',
+    category: 'cortex',
     size: '2.3GB',
     type: 'GGUF',
     rating: 4.8,
@@ -16,10 +16,10 @@ export const mockModels: Model[] = [
     isInstalled: true,
   },
   {
-    id: 'jan-nano-32k',
-    name: 'Jan-Nano (32k)',
+    id: 'cortex-nano-32k',
+    name: 'Cortex-Nano (32k)',
     description: 'Compact 4B model for web search with extended context window and MCP tool support.',
-    category: 'jan', 
+    category: 'cortex', 
     size: '2.1GB',
     type: 'GGUF',
     rating: 4.6,
@@ -31,7 +31,7 @@ export const mockModels: Model[] = [
     id: 'lucy',
     name: 'Lucy',
     description: '1.7B mobile-optimized model for web search. Perfect for resource-constrained environments.',
-    category: 'jan',
+    category: 'cortex',
     size: '980MB', 
     type: 'GGUF',
     rating: 4.4,
@@ -101,7 +101,7 @@ export const mockModels: Model[] = [
     rating: 4.9,
     downloads: 'N/A',
     recommended: true,
-    isInstalled: false,
+    isInstalled: true,
     requiresApiKey: true,
   },
   {
@@ -114,7 +114,7 @@ export const mockModels: Model[] = [
     rating: 4.8,
     downloads: 'N/A',
     recommended: true,
-    isInstalled: false,
+    isInstalled: true,
     requiresApiKey: true,
   },
   {
@@ -127,7 +127,7 @@ export const mockModels: Model[] = [
     rating: 4.7,
     downloads: 'N/A',
     recommended: false,
-    isInstalled: false,
+    isInstalled: true,
     requiresApiKey: true,
   },
 ];
@@ -135,19 +135,19 @@ export const mockModels: Model[] = [
 export const mockConversations: Conversation[] = [
   {
     id: 'conv-1',
-    title: 'Getting Started with Jan',
+    title: 'Getting Started with Cortex',
     lastActivity: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
     messages: [
       {
         id: 'msg-1',
         role: 'user',
-        content: 'What can Jan do?',
+        content: 'What can Cortex do?',
         timestamp: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000 - 5 * 60 * 1000).toISOString(),
       },
       {
         id: 'msg-2', 
         role: 'assistant',
-        content: 'Jan is your private AI assistant that runs 100% offline on your device. Here\'s what I can help you with:\n\n• **Local AI Models**: I can run powerful language models directly on your computer without internet\n• **Privacy First**: All conversations stay on your device - no data is sent to external servers\n• **Model Flexibility**: Choose from local models like Llama, Mistral, or connect to cloud providers\n• **Tool Integration**: Connect to external tools through MCP (Model Context Protocol)\n• **Code & Writing**: Help with programming, creative writing, analysis, and more\n\nWould you like to know more about any specific feature?',
+        content: 'Cortex is your private AI assistant that runs 100% offline on your device. Here\'s what I can help you with:\n\n• **Local AI Models**: I can run powerful language models directly on your computer without internet\n• **Privacy First**: All conversations stay on your device - no data is sent to external servers\n• **Model Flexibility**: Choose from local models like Llama, Mistral, or connect to cloud providers\n• **Tool Integration**: Connect to external tools through MCP (Model Context Protocol)\n• **Code & Writing**: Help with programming, creative writing, analysis, and more\n\nWould you like to know more about any specific feature?',
         timestamp: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000 - 4 * 60 * 1000).toISOString(),
       },
     ],
@@ -164,7 +164,7 @@ export const mockSettings: Settings = {
   general: {
     theme: 'light',
     language: 'en',
-    defaultModel: 'jan-v1',
+    defaultModel: 'cortex-v1',
   },
   privacy: {
     localMode: true,
@@ -173,7 +173,7 @@ export const mockSettings: Settings = {
   },
   models: {
     autoDownloadUpdates: false,
-    downloadPath: '/Users/username/Jan/models',
+    downloadPath: '/Users/username/Cortex/models',
     maxConcurrentDownloads: 2,
   },
   apiKeys: {

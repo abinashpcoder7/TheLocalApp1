@@ -67,13 +67,8 @@ const Sidebar: React.FC<SidebarProps> = ({
         <div className="flex items-center gap-2">
           <div className="flex items-center gap-2 text-xl font-semibold">
             <Flame className="h-6 w-6 text-orange-500" />
-            {!isCollapsed && <span className="text-gray-900 dark:text-white">Jan</span>}
+            {!isCollapsed && <span className="text-gray-900 dark:text-white">Cortex</span>}
           </div>
-          {!isCollapsed && (
-            <Badge className="ml-auto text-xs bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300">
-              v0.6.8
-            </Badge>
-          )}
         </div>
       </div>
 

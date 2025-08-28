@@ -81,7 +81,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-2">
               <Flame className="h-5 w-5 text-orange-500" />
-              <h1 className="text-lg font-semibold text-gray-900 dark:text-white">Jan</h1>
+              <h1 className="text-lg font-semibold text-gray-900 dark:text-white">Cortex</h1>
             </div>
             <Badge variant="outline" className="text-xs">
               <Bot className="h-3 w-3 mr-1" />
@@ -109,7 +109,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
                   <Flame className="h-8 w-8 text-white" />
                 </div>
               </div>
-              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">Welcome to Jan</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">Welcome to Cortex</h2>
               <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-md mx-auto">
                 Your private AI assistant that runs 100% offline. Start a conversation below.
               </p>
@@ -159,7 +159,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
                     <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
                     <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
                   </div>
-                  <span className="text-sm text-gray-500 dark:text-gray-400">Jan is thinking...</span>
+                  <span className="text-sm text-gray-500 dark:text-gray-400">Cortex is thinking...</span>
                 </div>
               </Card>
             </div>
@@ -175,7 +175,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
               value={inputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
               onKeyPress={handleKeyPress}
-              placeholder="Message Jan..."
+              placeholder="Message Cortex..."
               className="pr-12 py-3 h-12 text-base"
               disabled={isLoading}
             />
@@ -183,7 +183,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
               <Send className="h-4 w-4" />
             </Button>
           </div>
-          <p className="text-xs text-gray-500 dark:text-gray-400 text-center mt-2">Jan can make mistakes. Consider checking important information.</p>
+          <p className="text-xs text-gray-500 dark:text-gray-400 text-center mt-2">Cortex can make mistakes. Consider checking important information.</p>
         </div>
       </div>
     </div>

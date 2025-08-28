@@ -1,5 +1,5 @@
 {
-  "name": "Jan AI Clone",
-  "description": "A privacy-first, open-source alternative to ChatGPT that runs 100% offline. This clone showcases the UI and integrates with Gemini API for real-time responses.",
+  "name": "Cortex AI",
+  "description": "A privacy-first, open-source alternative to ChatGPT that runs 100% offline. This app showcases the UI and integrates with Gemini API for real-time responses.",
   "requestFramePermissions": []
 }
